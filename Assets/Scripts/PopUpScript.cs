@@ -10,6 +10,8 @@ public class PopUpScript : MonoBehaviour
     private bool tabUp;
     public float moveDistance;
     public float moveSpeed;
+    public AudioSource src;
+    public AudioClip SFX_OPEN, SFX_CLOSE;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,13 @@ public class PopUpScript : MonoBehaviour
     }
 
     public void OnMouseUp(){
+        if (vector.GetComponent<uiMoveScript>().isUp()){
+            src.clip = SFX_CLOSE ;
+        }else{
+            src.clip = SFX_OPEN;
+        }
+        src.Play();
+
         
         vector.GetComponent<uiMoveScript>().Move();
             // if(tabUp){

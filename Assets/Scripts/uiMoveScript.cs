@@ -24,5 +24,9 @@ public class uiMoveScript : MonoBehaviour
         
     }
 
+    public bool isUp(){
+        return up;
+    }
+
 
 }
