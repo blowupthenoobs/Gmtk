@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject startMenu;
+ 
+
     public void StartGame() {
 
         startMenu.SetActive(false);
