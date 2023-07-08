@@ -8,9 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
+  - Characters
   - 
   - 
   - 
@@ -21,14 +22,13 @@ TagManager:
   - 
   - 
   - 
+  - ProgressTab
   - 
   - 
+  - QuestTab
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - InventoryTab
   - 
   - 
   - 
