@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InventoryScript : MonoBehaviour
 {
-        public int maxItemCountIncluding0 = 100;
+        public int maxItemCountIncluding0;
 
     List<object> inventoryItems; //evens store the gameobject (item), odds store the amount of said (previous) item
 
@@ -65,4 +65,6 @@ public class InventoryScript : MonoBehaviour
 
         return (int)inventoryItems[indexOfItemCount];
     }
+
+    
 }

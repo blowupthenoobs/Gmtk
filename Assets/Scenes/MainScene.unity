@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198292760}
   - component: {fileID: 198292761}
+  - component: {fileID: 198292762}
   m_Layer: 20
   m_Name: Slot3
   m_TagString: Untagged
@@ -207,6 +208,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &198292762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198292759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c14e29587744c45a9c2a8343463a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 778176809}
+  sword: {fileID: 5315774469253713322, guid: e13d11c500f7403498a7854b4150b5bb, type: 3}
 --- !u!1 &270997122
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1064118180}
   - component: {fileID: 1064118181}
+  - component: {fileID: 1064118182}
   m_Layer: 20
   m_Name: Slot1
   m_TagString: Untagged
@@ -554,6 +570,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1064118182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064118179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c14e29587744c45a9c2a8343463a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 778176809}
+  sword: {fileID: 5315774469253713322, guid: e13d11c500f7403498a7854b4150b5bb, type: 3}
 --- !u!1 &1108769045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,6 +1154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1817623927}
   - component: {fileID: 1817623928}
+  - component: {fileID: 1817623929}
   m_Layer: 20
   m_Name: Slot2
   m_TagString: Untagged
@@ -1198,6 +1229,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1817623929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817623926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c14e29587744c45a9c2a8343463a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 778176809}
+  sword: {fileID: 5315774469253713322, guid: e13d11c500f7403498a7854b4150b5bb, type: 3}
 --- !u!1 &1930354269
 GameObject:
   m_ObjectHideFlags: 0
