@@ -8,11 +8,12 @@ public class HeroScript : MonoBehaviour
     private bool foundSpot;
     private Transform spotToGo;
     public Transform MissionStation;
-    private int spotIndex;
+    public int spotIndex;
     public float moveSpeed;
 
     public void EnterBar()
     {
+        Debug.Log("finding Spot");
 
         for(var i=0;i>barSpots.Length;i++)
         {
@@ -21,19 +22,31 @@ public class HeroScript : MonoBehaviour
                 var taken=barSpots[i].GetComponent<SpotScript>().taken;
 
                 if(!taken){
-                    spotToGo=barSpots[i].transform;
-                    spotIndex=i;
-                    foundSpot=true;
-                    barSpots[i].GetComponent<SpotScript>().TakeSpot();
+                    if(!foundSpot)
+                    {
+                        spotToGo=barSpots[i].transform;
+                        spotIndex=i;
+                        foundSpot=true;
+                        barSpots[i].GetComponent<SpotScript>().TakeSpot();
+                    }
+                    
                 }
             }
             
         }
     }
 
+    void Awake()
+    {
+        EnterBar();
+    }
+
     void Update()
     {
-        transform.position=Vector2.MoveTowards(transform.position, spotToGo.transform.position, moveSpeed*Time.deltaTime);
+        if(foundSpot)
+        {
+            transform.position=Vector2.MoveTowards(transform.position, spotToGo.transform.position, moveSpeed*Time.deltaTime);
+        }
     }
 
     public void LeaveSpot()

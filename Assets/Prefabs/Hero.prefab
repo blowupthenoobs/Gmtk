@@ -99,5 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barSpots:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   MissionStation: {fileID: 0}
-  moveSpeed: 0
+  moveSpeed: 3
