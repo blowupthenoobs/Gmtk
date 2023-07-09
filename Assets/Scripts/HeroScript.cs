@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeroScript : MonoBehaviour
 {
-    public Transform[] barSpots;
+    public GameObject[] barSpots;
     private bool foundSpot;
     private Transform spotToGo;
     public Transform MissionStation;
@@ -39,7 +39,7 @@ public class HeroScript : MonoBehaviour
     public void LeaveSpot()
     {
         spotToGo=MissionStation;
-        barSpots[spotIndex].GetComponent<SpotScript>().LeaveSpot;
+        // barSpots[spotIndex].transform.GetComponent<SpotScript>().LeaveSpot;
         foundSpot=false;
     }
 }
