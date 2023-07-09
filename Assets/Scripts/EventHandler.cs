@@ -16,7 +16,7 @@ public class EventHandler : MonoBehaviour
     void Awake()
     {
         inventory.GetComponent<InventoryScript>().recieveItem(sword, 1, false);
-        StartCoroutine(WaitToMakeHero(2));
+        // StartCoroutine(WaitToMakeHero(2));
     }
 
     void Update()
@@ -37,7 +37,7 @@ public class EventHandler : MonoBehaviour
 
     private IEnumerator WaitToMakeHero(int Time)
     {
-        yield return new WaitForSeconds(Time);
         MakeHero();
+        yield return new WaitForSeconds(Time);
     }
 }
