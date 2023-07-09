@@ -6,7 +6,7 @@ public class EventHandler : MonoBehaviour
 {
     public GameObject hero;
     public GameObject inventory;
-    public Transform[] heroSpots;
+    public GameObject[] heroSpots;
     public Transform outStation;
 
 
@@ -26,10 +26,9 @@ public class EventHandler : MonoBehaviour
 
     public void MakeHero()
     {
-        GameObject Character = Instantiate(hero, new Vector3(7, -1, 0), Quaternion.Euler(0, 0, 0));
-        for(i=0;i>heroSpots[].length;i++);
-        {
-            Character.GetComponent<HeroScript>().barSpots[i]=heroSpots[i];
+        GameObject Character = Instantiate(hero, outStation.position, Quaternion.Euler(0, 0, 0));
+        for(var i=0;i<heroSpots.Length;i++){
+            Character.GetComponent<HeroScript>().barSpots[i] = heroSpots[i];
         }
         Character.GetComponent<HeroScript>().MissionStation=outStation;
     }
