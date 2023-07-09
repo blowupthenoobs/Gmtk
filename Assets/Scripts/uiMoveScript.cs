@@ -12,11 +12,15 @@ public class uiMoveScript : MonoBehaviour
         var moveDistance=tab.GetComponent<PopUpScript>().moveDistance;
         var vert=tab.GetComponent<PopUpScript>().vert;
 
-        if(vert){
-            if(up){
+        if(vert)
+        {
+            if(up)
+            {
                 transform.position=new Vector2(tab.transform.position.x, tab.transform.position.y-moveDistance);
                 up=false;
-            }else{
+            }
+            else
+            {
                 transform.position=new Vector2(tab.transform.position.x, tab.transform.position.y+moveDistance);
                 up=true;
             }
@@ -24,7 +28,8 @@ public class uiMoveScript : MonoBehaviour
         
     }
 
-    public bool isUp(){
+    public bool isUp()
+    {
         return up;
     }
 
