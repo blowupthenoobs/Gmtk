@@ -6,7 +6,7 @@ public class InventoryScript : MonoBehaviour
 {
         public int maxItemCountIncluding0;
 
-    List<object> inventoryItems; //evens store the gameobject (item), odds store the amount of said (previous) item
+    List<object> inventoryItems = new List<object>(); //evens store the gameobject (item), odds store the amount of said (previous) item
 
     public void recieveItem(GameObject item, int count, bool forceTransaction)
     {
