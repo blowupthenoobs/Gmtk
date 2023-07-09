@@ -27,7 +27,7 @@ public class EventHandler : MonoBehaviour
     public void MakeHero()
     {
         GameObject Character = Instantiate(hero, outStation.position, Quaternion.Euler(0, 0, 0));
-        for(var i=0;i<heroSpots.Length;i++){
+        for(var i=0;i>heroSpots.Length;i++){
             Character.GetComponent<HeroScript>().barSpots[i] = heroSpots[i];
         }
         Character.GetComponent<HeroScript>().MissionStation=outStation;

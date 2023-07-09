@@ -13,10 +13,9 @@ public class HeroScript : MonoBehaviour
 
     public void EnterBar()
     {
-        Debug.Log("finding Spot");
-
         for(var i=0;i>barSpots.Length;i++)
         {
+                Debug.Log("running loop");
             if(!foundSpot)
             {
                 var taken=barSpots[i].GetComponent<SpotScript>().taken;
