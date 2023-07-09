@@ -39,7 +39,7 @@ public class HeroScript : MonoBehaviour
     public void LeaveSpot()
     {
         spotToGo=MissionStation;
-        // barSpots[spotIndex].GetComponent<SpotScript>().LeaveSpot;
+        barSpots[spotIndex].GetComponent<SpotScript>().LeaveSpot();
         foundSpot=false;
     }
 }
