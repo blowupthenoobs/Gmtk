@@ -11,6 +11,8 @@ public class HeroScript : MonoBehaviour
     public int spotIndex;
     public float moveSpeed;
 
+    private bool foundFirstSpot;
+
     public void EnterBar()
     {
         transform.position=Vector2.MoveTowards(transform.position, spotToGo.transform.position, moveSpeed*Time.deltaTime);
@@ -47,6 +49,11 @@ public class HeroScript : MonoBehaviour
 
     void Update()
     {
+        if(!foundFirstSpot)
+        {
+            EnterBar();
+            foundFirstSpot=true;
+        }
         // if(foundSpot)
         // {
             transform.position = Vector2.MoveTowards(transform.position, spotToGo.transform.position, moveSpeed*Time.deltaTime);
