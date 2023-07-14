@@ -45,10 +45,12 @@ public class HeroScript : MonoBehaviour
     {
         transform.position = MissionStation.position;
         EnterBar();
+        foundFirstSpot=false;
     }
 
     void Update()
     {
+        spotToGo=barSpots[spotIndex].transform;
         if(!foundFirstSpot)
         {
             EnterBar();
