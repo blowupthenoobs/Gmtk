@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EventHandler : MonoBehaviour
 {
+    public static EventHandler Instance;
+
     public GameObject hero;
     public GameObject inventory;
     public GameObject[] heroSpots;
@@ -15,6 +17,11 @@ public class EventHandler : MonoBehaviour
 
     void Awake()
     {
+        if(Instance==null)
+            Instance=this;
+        else
+            Destroy(gameObject);
+
         inventory.GetComponent<InventoryScript>().recieveItem(sword, 1, false);
         StartCoroutine(WaitToMakeHero(2));
     }

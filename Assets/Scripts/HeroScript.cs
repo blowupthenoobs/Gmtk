@@ -11,7 +11,7 @@ public class HeroScript : MonoBehaviour
     public int spotIndex;
     public float moveSpeed;
 
-    private bool foundFirstSpot;
+    public bool foundFirstSpot;
 
     public void EnterBar()
     {
