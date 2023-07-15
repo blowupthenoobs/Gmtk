@@ -44,6 +44,10 @@ public class HeroScript : MonoBehaviour
     void Awake()
     {
         transform.position = MissionStation.position;
+
+        barSpots=EventHandler.instance.heroSpots;
+        MissionStation=EventHandler.outStation;
+        foundFirstSpot=false;
     }
 
     void Update()

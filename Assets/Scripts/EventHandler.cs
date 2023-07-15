@@ -38,8 +38,6 @@ public class EventHandler : MonoBehaviour
             Character.GetComponent<HeroScript>().barSpots[i] = heroSpots[i];
         }
         Character.GetComponent<HeroScript>().MissionStation=outStation;
-
-        Character.GetComponent<HeroScript>().foundFirstSpot=false;
     }
 
     private IEnumerator WaitToMakeHero(int Time)
