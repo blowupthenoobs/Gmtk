@@ -44,7 +44,6 @@ public class HeroScript : MonoBehaviour
     void Awake()
     {
         transform.position = MissionStation.position;
-        EnterBar();
         foundFirstSpot=false;
     }
 
