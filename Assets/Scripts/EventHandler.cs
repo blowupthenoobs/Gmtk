@@ -32,7 +32,7 @@ public class EventHandler : MonoBehaviour
         }
         Character.GetComponent<HeroScript>().MissionStation=outStation;
 
-        Character.GetComponent<HeroScript>().EnterBar();
+        Character.GetComponent<HeroScript>().foundFirstSpot=false;
     }
 
     private IEnumerator WaitToMakeHero(int Time)
