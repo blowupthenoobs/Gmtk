@@ -43,8 +43,6 @@ public class HeroScript : MonoBehaviour
 
     void Awake()
     {
-        transform.position = MissionStation.position;
-
         barSpots=EventHandler.Instance.heroSpots;
         MissionStation=EventHandler.Instance.outStation;
         foundFirstSpot=false;
@@ -58,10 +56,8 @@ public class HeroScript : MonoBehaviour
             EnterBar();
             foundFirstSpot=true;
         }
-        // if(foundSpot)
-        // {
+
             transform.position = Vector2.MoveTowards(transform.position, spotToGo.transform.position, moveSpeed*Time.deltaTime);
-        // }
     }
 
     public void LeaveSpot()
