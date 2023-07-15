@@ -45,8 +45,8 @@ public class HeroScript : MonoBehaviour
     {
         transform.position = MissionStation.position;
 
-        barSpots=EventHandler.instance.heroSpots;
-        MissionStation=EventHandler.outStation;
+        barSpots=EventHandler.Instance.heroSpots;
+        MissionStation=EventHandler.Instance.outStation;
         foundFirstSpot=false;
     }
 
