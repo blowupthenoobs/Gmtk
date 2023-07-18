@@ -516,7 +516,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 778176809}
   heldItem: {fileID: 0}
-  item: {fileID: 0}
   hasItem: 0
 --- !u!1 &270997122
 GameObject:
@@ -1372,7 +1371,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 778176809}
   heldItem: {fileID: 0}
-  item: {fileID: 0}
   hasItem: 0
 --- !u!1 &1108769045
 GameObject:
@@ -2382,7 +2380,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 778176809}
   heldItem: {fileID: 0}
-  item: {fileID: 0}
   hasItem: 0
 --- !u!1 &1874733625
 GameObject:
@@ -2515,7 +2512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9423d20bb8f9e544b2803248425e52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxItemCountIncluding0: 100
+  maxItemCountIncluding0: 2
   itemSlots:
   - {fileID: 1064118179}
   - {fileID: 1817623926}

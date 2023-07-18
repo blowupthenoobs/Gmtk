@@ -6,7 +6,7 @@ public class ItemSlotScript : MonoBehaviour
 {
     public GameObject inventory;
     public GameObject heldItem;
-    public GameObject item;
+    private GameObject item;
     public bool hasItem;
 
     // Start is called before the first frame update
