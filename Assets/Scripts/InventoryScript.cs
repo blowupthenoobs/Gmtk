@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryScript : MonoBehaviour
 {
         public int maxItemCountIncluding0;
+        public GameObject[] itemSlots;
 
     List<object> inventoryItems = new List<object>(); //evens store the gameobject (item), odds store the amount of said (previous) item
 
@@ -64,6 +65,33 @@ public class InventoryScript : MonoBehaviour
         indexOfItemCount = inventoryItems.IndexOf(item) + 1;
 
         return (int)inventoryItems[indexOfItemCount];
+    }
+
+    void Update()
+    {
+        for(var i=1; i<inventoryItems.Count; i+=2)
+        {
+            var itemTaken=false;
+
+            for(var x=0; x<itemSlots.Length; x++) //Checks if item is already in a slot
+            {
+                if(itemSlots[x].GetComponent<ItemSlotScript>().hasItem && itemSlots[x].GetComponent<ItemSlotScript>().heldItem=inventoryItems[i])
+                {
+                    itemTaken=true;
+                }
+            }
+
+            if(!itemTaken) //If Item is not already taken, this will assign it to the first slot avaliable
+            {
+                for(var x=0; x<itemSlots.Length; x++)
+                {
+                    if(!itemSlots[x].GetComponent<ItemSlotScript>().hasItem)
+                    {
+                        itemSlots[x].GetComponent<ItemSlotScript>().heldItem=inventoryItems[i];
+                    }
+                }
+            }
+        }
     }
 
     

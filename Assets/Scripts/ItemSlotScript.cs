@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemSlotScript : MonoBehaviour
 {
     public GameObject inventory;
-    public GameObject sword;
+    public GameObject heldItem;
     public GameObject item;
     public bool hasItem;
 
@@ -18,16 +18,16 @@ public class ItemSlotScript : MonoBehaviour
     // Update is called once per frame
     private void OnMouseDown()
     {
-        Debug.Log(inventory.GetComponent<InventoryScript>().checkItemCount(sword));
+        Debug.Log(inventory.GetComponent<InventoryScript>().checkItemCount(heldItem));
     }
 
-    private void Update()
+    void Update()
     {
-        if(inventory.GetComponent<InventoryScript>().checkItemCount(sword)>0)
+        if(inventory.GetComponent<InventoryScript>().checkItemCount(heldItem)>0)
         {
             if(!hasItem)
             {
-                item=Instantiate(sword, gameObject.transform.position, gameObject.transform.rotation);
+                item=Instantiate(heldItem, gameObject.transform.position, gameObject.transform.rotation);
                 item.GetComponent<ItemScript>().Slot=gameObject;
                 hasItem=true;
             }

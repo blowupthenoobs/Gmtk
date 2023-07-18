@@ -14,6 +14,7 @@ public class EventHandler : MonoBehaviour
 
     //Items
     public GameObject sword;
+    public GameObject healthPotion;
 
     void Awake()
     {
@@ -22,7 +23,8 @@ public class EventHandler : MonoBehaviour
         else
             Destroy(gameObject);
 
-        inventory.GetComponent<InventoryScript>().recieveItem(sword, 1, false);
+        inventory.GetComponent<InventoryScript>().recieveItem(sword, 2, false);
+        inventory.GetComponent<InventoryScript>().recieveItem(healthPotion, 1, false);
         StartCoroutine(WaitToMakeHero(2));
     }
 
