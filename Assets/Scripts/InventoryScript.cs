@@ -75,7 +75,7 @@ public class InventoryScript : MonoBehaviour
 
             for(var x=0; x<itemSlots.Length; x++) //Checks if item is already in a slot
             {
-                if(itemSlots[x].GetComponent<ItemSlotScript>().hasItem && itemSlots[x].GetComponent<ItemSlotScript>().heldItem=inventoryItems[i])
+                if(itemSlots[x].GetComponent<ItemSlotScript>().hasItem && itemSlots[x].GetComponent<ItemSlotScript>().heldItem.Equals(inventoryItems[i]))
                 {
                     itemTaken=true;
                 }
@@ -87,7 +87,7 @@ public class InventoryScript : MonoBehaviour
                 {
                     if(!itemSlots[x].GetComponent<ItemSlotScript>().hasItem)
                     {
-                        itemSlots[x].GetComponent<ItemSlotScript>().heldItem=inventoryItems[i];
+                        itemSlots[x].GetComponent<ItemSlotScript>().heldItem= (GameObject)inventoryItems[i];
                     }
                 }
             }
