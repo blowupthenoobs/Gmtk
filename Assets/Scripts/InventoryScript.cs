@@ -76,7 +76,6 @@ public class InventoryScript : MonoBehaviour
 
     private void AssignItem(GameObject item)
     {
-        Debug.Log("somethingHappened");
         for(var i=0; i<itemSlots.Length; i++)
         {
             if(!itemSlots[i].GetComponent<ItemSlotScript>().hasItem)
