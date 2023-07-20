@@ -47,7 +47,6 @@ public class InventoryScript : MonoBehaviour
 
             return false;
         }
-
         else
         {
             if (((int)inventoryItems[indexOfItemCount] == 0))

@@ -23,6 +23,7 @@ public class EventHandler : MonoBehaviour
         else
             Destroy(gameObject);
 
+        //Starting Items
         inventory.GetComponent<InventoryScript>().recieveItem(sword, 2, false);
         inventory.GetComponent<InventoryScript>().recieveItem(healthPotion, 1, false);
         StartCoroutine(WaitToMakeHero(2));
