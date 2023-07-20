@@ -28,8 +28,10 @@ public class InventoryScript : MonoBehaviour
             }
             inventoryItems.Insert(0, count); //count must go first because it is the 2nd item
             inventoryItems.Insert(0, item);
+            AssignItem(item);
         }
     }
+    
     public bool loseItem(GameObject item, int count, bool forceTransaction) //its a bool type so it can return true/false (has enough items)
     {
         int indexOfItemCount; //the index of where the item count is stored for the specified item
@@ -52,6 +54,7 @@ public class InventoryScript : MonoBehaviour
             {
                 //if we now have 0 of the item, simply remove the item from the list
                 inventoryItems.Remove(item);
+                LoseStack(item);
             }
 
             return true;
@@ -69,28 +72,24 @@ public class InventoryScript : MonoBehaviour
 
     void Update()
     {
-        for(var i=1; i<inventoryItems.Count; i+=2)
+
+    }
+
+    private void AssignItem(GameObject item)
+    {
+        for(var i=0; i<itemSlots.Length; i++)
         {
-            var itemTaken=false;
+            if(!itemSlots[i].GetComponent<ItemSlotScript>().hasItem)
+                itemSlots[i].GetComponent<ItemSlotScript>().VisualizeItem(item);
+        }
+    }
 
-            for(var x=0; x<itemSlots.Length; x++) //Checks if item is already in a slot
-            {
-                if(itemSlots[x].GetComponent<ItemSlotScript>().hasItem && itemSlots[x].GetComponent<ItemSlotScript>().heldItem.Equals(inventoryItems[i]))
-                {
-                    itemTaken=true;
-                }
-            }
-
-            if(!itemTaken) //If Item is not already taken, this will assign it to the first slot avaliable
-            {
-                for(var x=0; x<itemSlots.Length; x++)
-                {
-                    if(!itemSlots[x].GetComponent<ItemSlotScript>().hasItem)
-                    {
-                        itemSlots[x].GetComponent<ItemSlotScript>().heldItem= (GameObject)inventoryItems[i];
-                    }
-                }
-            }
+    private void LoseStack(GameObject item)
+    {
+        for(var i=0; i<itemSlots.Length; i++)
+        {
+            if(itemSlots[i].GetComponent<ItemSlotScript>().heldItem=item)
+                itemSlots[i].GetComponent<ItemSlotScript>().RemoveItem();
         }
     }
 

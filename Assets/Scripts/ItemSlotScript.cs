@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemSlotScript : MonoBehaviour
 {
     public GameObject inventory;
+    public GameObject placeHolder;
     public GameObject heldItem;
     private GameObject item;
     public bool hasItem;
@@ -23,19 +24,21 @@ public class ItemSlotScript : MonoBehaviour
 
     void Update()
     {
-        if(inventory.GetComponent<InventoryScript>().checkItemCount(heldItem)>0)
-        {
-            if(!hasItem)
-            {
-                item=Instantiate(heldItem, gameObject.transform.position, gameObject.transform.rotation);
-                item.GetComponent<ItemScript>().Slot=gameObject;
-                hasItem=true;
-            }
-            
-        }
-        else
-        {
-            hasItem=false;
-        }
+        
+    }
+
+    public void VisualizeItem(GameObject newItem)
+    {
+        hasItem=true;
+        heldItem=newItem;
+        item=Instantiate(heldItem, gameObject.transform.position, gameObject.transform.rotation);
+        item.GetComponent<ItemScript>().Slot=gameObject;
+    }
+
+    public void RemoveItem()
+    {
+        hasItem=false;
+        heldItem=placeHolder;
+        Destroy(item);
     }
 }
