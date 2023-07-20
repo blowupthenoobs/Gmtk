@@ -515,7 +515,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 778176809}
-  heldItem: {fileID: 0}
+  placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
   hasItem: 0
 --- !u!1 &270997122
 GameObject:
@@ -1370,7 +1371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 778176809}
-  heldItem: {fileID: 0}
+  placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
   hasItem: 0
 --- !u!1 &1108769045
 GameObject:
@@ -2379,7 +2381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 778176809}
-  heldItem: {fileID: 0}
+  placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
   hasItem: 0
 --- !u!1 &1874733625
 GameObject:
