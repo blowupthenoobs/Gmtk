@@ -40,15 +40,6 @@ public class PopUpScript : MonoBehaviour
 
         
         vector.GetComponent<uiMoveScript>().Move();
-            // if(tabUp){
-            //         tabUp=false;
-                    
-            //         // transform.position-=(Vector3.up*moveSpeed);
-            // }else{
-            //         tabUp=true;
-            //         transform.position=Vector2.MoveTowards(transform.position, vector.transform.position, moveSpeed*Time.deltaTime);
-            //         // transform.position+=(Vector3.up*moveSpeed);
-            // }
             
        } 
 }
