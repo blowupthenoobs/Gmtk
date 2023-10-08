@@ -39,7 +39,7 @@ public class PopUpScript : MonoBehaviour
         src.Play();
 
         
-        vector.GetComponent<uiMoveScript>().Move();
+        vector.SendMessage("Move");
             
        } 
 }
