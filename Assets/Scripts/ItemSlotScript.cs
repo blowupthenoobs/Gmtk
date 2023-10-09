@@ -39,8 +39,8 @@ public class ItemSlotScript : MonoBehaviour
 
     public void RemoveItem()
     {
-        hasItem=false;
-        heldItem=placeHolder;
         Destroy(item);
+        heldItem=placeHolder;
+        hasItem=false;
     }
 }

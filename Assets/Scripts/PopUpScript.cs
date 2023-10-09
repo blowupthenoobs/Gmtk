@@ -27,7 +27,12 @@ public class PopUpScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position=Vector2.MoveTowards(transform.position, vector.transform.position, moveSpeed*Time.deltaTime);
+        if(vert)
+        {
+            Vector2 targetPosition = new Vector2(transform.position.x, vector.transform.position.y);
+            transform.position=Vector2.MoveTowards(transform.position, targetPosition, moveSpeed*Time.deltaTime);
+        }
+        
     }
 
     public void OnMouseUp(){

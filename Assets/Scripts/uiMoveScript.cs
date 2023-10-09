@@ -5,12 +5,24 @@ using UnityEngine;
 public class uiMoveScript : MonoBehaviour
 {
     public GameObject tab;
+    private bool vert;
+    private float moveDistance;
     private bool up;
+    public Vector2 startPos;
+    private Vector2 altPos;
 
+    void Awake()
+    {
+        vert=tab.GetComponent<PopUpScript>().vert;
+        moveDistance=tab.GetComponent<PopUpScript>().moveDistance;
+
+        if(vert)
+            altPos = new Vector2(startPos.x, startPos.y+moveDistance);
+        else
+            altPos = new Vector2(startPos.x+moveDistance, startPos.y);
+    }
 
     public void Move(){
-        var moveDistance=tab.GetComponent<PopUpScript>().moveDistance;
-        var vert=tab.GetComponent<PopUpScript>().vert;
 
         if(vert)
         {
