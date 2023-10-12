@@ -8,6 +8,8 @@ public class InventoryScript : MonoBehaviour
         public GameObject[] itemSlots;
 
     List<object> inventoryItems = new List<object>(); //evens store the gameobject (item), odds store the amount of said (previous) item
+    List<GameObject> stockedItems = new List<GameObject>();
+    List<int> itemCount = new List<int>();
 
     public void recieveItem(GameObject item, int count, bool forceTransaction)
     {

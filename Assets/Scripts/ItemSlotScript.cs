@@ -16,11 +16,6 @@ public class ItemSlotScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    private void OnMouseDown()
-    {
-        Debug.Log(inventory.GetComponent<InventoryScript>().checkItemCount(heldItem));
-    }
 
     void Update()
     {
@@ -34,7 +29,7 @@ public class ItemSlotScript : MonoBehaviour
         hasItem=true;
         heldItem=newItem;
         item=Instantiate(heldItem, gameObject.transform.position, gameObject.transform.rotation);
-        item.GetComponent<ItemScript>().Slot=gameObject;
+        item.transform.SetParent(gameObject.transform);
     }
 
     public void RemoveItem()
@@ -42,5 +37,10 @@ public class ItemSlotScript : MonoBehaviour
         Destroy(item);
         heldItem=placeHolder;
         hasItem=false;
+    }
+
+    public void Select()
+    {
+        Debug.Log(inventory.GetComponent<InventoryScript>().checkItemCount(heldItem));
     }
 }
