@@ -64,10 +64,15 @@ public class InventoryScript : MonoBehaviour
 
     private void AssignItem(GameObject item)
     {
+        bool foundSpot = false;
+
         for(var i=0; i<itemSlots.Length; i++)
         {
-            if(!itemSlots[i].GetComponent<ItemSlotScript>().hasItem)
+            if(!itemSlots[i].GetComponent<ItemSlotScript>().hasItem && !foundSpot)
+            {
                 itemSlots[i].GetComponent<ItemSlotScript>().VisualizeItem(item);
+                foundSpot=true;
+            }
         }
     }
 
