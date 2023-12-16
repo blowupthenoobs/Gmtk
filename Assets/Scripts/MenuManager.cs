@@ -10,7 +10,6 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame() {
 
-        startMenu.SetActive(false);
         SceneManager.LoadScene("MainScene");
     }
     public void Quitgame() {
