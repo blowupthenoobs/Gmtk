@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeroScript : MonoBehaviour
 {
-    public GameObject[] barSpots;
+    public List<GameObject> barSpots = new List<GameObject>();
     private bool foundSpot;
     public Transform spotToGo;
     public Transform MissionStation;
@@ -18,8 +18,8 @@ public class HeroScript : MonoBehaviour
         transform.position=Vector2.MoveTowards(transform.position, spotToGo.transform.position, moveSpeed*Time.deltaTime);
       
 
-        Debug.Log(barSpots.Length);
-        for(var i=0;i>barSpots.Length;i++)
+        Debug.Log(barSpots.Count);
+        for(var i=0;i>barSpots.Count;i++)
         {
                 Debug.Log("running loop");
             if(!foundSpot)
@@ -43,9 +43,9 @@ public class HeroScript : MonoBehaviour
 
     void Awake()
     {
-        barSpots=EventHandler.Instance.heroSpots;
-        MissionStation=EventHandler.Instance.outStation;
-        foundFirstSpot=false;
+        barSpots = EventHandler.Instance.heroSpots;
+        MissionStation = EventHandler.Instance.outStation;
+        foundFirstSpot = false;
     }
 
     void Update()

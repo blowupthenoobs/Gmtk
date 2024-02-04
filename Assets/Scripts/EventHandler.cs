@@ -8,7 +8,7 @@ public class EventHandler : MonoBehaviour
 
     public GameObject hero;
     public GameObject inventory;
-    public GameObject[] heroSpots;
+    public List<GameObject> heroSpots = new List<GameObject>();
     public Transform outStation;
 
 
