@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PopUpScript : MonoBehaviour
 {
@@ -21,14 +22,15 @@ public class PopUpScript : MonoBehaviour
 
     void Update()
     {
-        moveDistance = container.GetComponent<RectTransform>().localScale.y * container.GetComponent<RectTransform>().sizeDelta.y;
+        moveDistance = container.GetComponent<RectTransform>().sizeDelta.y;
 
         if(vert)
         {
             if(tabUp)
-                targetPos = moveDistance + gameObject.GetComponent<RectTransform>().localScale.y * gameObject.GetComponent<RectTransform>().sizeDelta.y;
+                targetPos = moveDistance - gameObject.GetComponent<RectTransform>().sizeDelta.y;
             else
-                targetPos = gameObject.GetComponent<RectTransform>().localScale.y * gameObject.GetComponent<RectTransform>().sizeDelta.y;
+                targetPos = 0;
+            
             Vector2 targetPosition = new Vector2(transform.position.x, targetPos);
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
