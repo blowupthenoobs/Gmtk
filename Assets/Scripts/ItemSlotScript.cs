@@ -24,8 +24,6 @@ public class ItemSlotScript : MonoBehaviour
 
     public void VisualizeItem(GameObject newItem)
     {
-        Debug.Log("somethingHappened");
-        
         hasItem=true;
         heldItem=newItem;
         item=Instantiate(heldItem, gameObject.transform.position, gameObject.transform.rotation);

@@ -17,9 +17,9 @@ public class uiMoveScript : MonoBehaviour
         moveDistance=tab.GetComponent<PopUpScript>().moveDistance;
 
         if(vert)
-            altPos = new Vector2(startPos.x, startPos.y+moveDistance);
+            altPos = new Vector2(startPos.x, startPos.y + moveDistance);
         else
-            altPos = new Vector2(startPos.x+moveDistance, startPos.y);
+            altPos = new Vector2(startPos.x + moveDistance, startPos.y);
     }
 
     public void Move(){
@@ -28,12 +28,12 @@ public class uiMoveScript : MonoBehaviour
         {
             if(up)
             {
-                transform.position=new Vector2(tab.transform.position.x, tab.transform.position.y-moveDistance);
+                transform.position=new Vector2(tab.transform.position.x, tab.transform.position.y - moveDistance);
                 up=false;
             }
             else
             {
-                transform.position=new Vector2(tab.transform.position.x, tab.transform.position.y+moveDistance);
+                transform.position = new Vector2(tab.transform.position.x, tab.transform.position.y+moveDistance);
                 up=true;
             }
         }

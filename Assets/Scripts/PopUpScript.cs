@@ -5,46 +5,44 @@ using UnityEngine;
 public class PopUpScript : MonoBehaviour
 {
     private Rigidbody2D rb;
+    [SerializeField] GameObject container;
     public bool vert;
-    public GameObject vector;
+    public float targetPos;
     private bool tabUp;
     public float moveDistance;
     public float moveSpeed;
     public AudioSource src;
     public AudioClip SFX_OPEN, SFX_CLOSE;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     private void Awake(){
         rb=GetComponent<Rigidbody2D>();
-        tabUp=false;
+        tabUp = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        moveDistance = container.GetComponent<RectTransform>().localScale.y * container.GetComponent<RectTransform>().sizeDelta.y;
+
         if(vert)
         {
-            Vector2 targetPosition = new Vector2(transform.position.x, vector.transform.position.y);
-            transform.position=Vector2.MoveTowards(transform.position, targetPosition, moveSpeed*Time.deltaTime);
+            if(tabUp)
+                targetPos = moveDistance + gameObject.GetComponent<RectTransform>().localScale.y * gameObject.GetComponent<RectTransform>().sizeDelta.y;
+            else
+                targetPos = gameObject.GetComponent<RectTransform>().localScale.y * gameObject.GetComponent<RectTransform>().sizeDelta.y;
+            Vector2 targetPosition = new Vector2(transform.position.x, targetPos);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
         
     }
 
-    public void OnMouseUp(){
-        if (vector.GetComponent<uiMoveScript>().isUp()){
+    public void OnMouseUp()
+    {
+        tabUp = !tabUp;
+        if (!tabUp)
             src.clip = SFX_CLOSE ;
-        }else{
+        else
             src.clip = SFX_OPEN;
-        }
-        src.Play();
-
         
-        vector.SendMessage("Move");
-            
-       } 
+        src.Play();
+    }
 }

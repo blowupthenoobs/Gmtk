@@ -11,7 +11,7 @@ public class InventoryContainerScript : MonoBehaviour
 
     void Awake()
     {
-        vert=tab.GetComponent<PopUpScript>().vert;
+        vert = tab.GetComponent<PopUpScript>().vert;
         moveSpeed=tab.GetComponent<PopUpScript>().moveSpeed;
     }
     void Update()
@@ -19,7 +19,7 @@ public class InventoryContainerScript : MonoBehaviour
         if(vert)
         {
             Vector2 targetPosition = new Vector2(transform.position.x, vector.transform.position.y);
-            transform.position=Vector2.MoveTowards(transform.position, targetPosition, moveSpeed*Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed*Time.deltaTime);
         }
     }
 }

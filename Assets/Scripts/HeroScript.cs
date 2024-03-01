@@ -17,8 +17,6 @@ public class HeroScript : MonoBehaviour
     {
         transform.position=Vector2.MoveTowards(transform.position, spotToGo.transform.position, moveSpeed*Time.deltaTime);
       
-
-        Debug.Log(barSpots.Count);
         for(var i=0;i>barSpots.Count;i++)
         {
                 Debug.Log("running loop");

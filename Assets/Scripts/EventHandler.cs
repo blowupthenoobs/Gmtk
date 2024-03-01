@@ -6,6 +6,8 @@ public class EventHandler : MonoBehaviour
 {
     public static EventHandler Instance;
 
+    public GameObject GameElementContainer;
+
     public GameObject hero;
     public GameObject inventory;
     public List<GameObject> heroSpots = new List<GameObject>();
@@ -37,6 +39,7 @@ public class EventHandler : MonoBehaviour
     public void MakeHero()
     {
         GameObject Character = Instantiate(hero, outStation.position, Quaternion.Euler(0, 0, 0));
+        Character.transform.SetParent(GameElementContainer.transform);
     }
 
     private IEnumerator WaitToMakeHero(int Time)
