@@ -17,17 +17,17 @@ public class PopUpScript : MonoBehaviour
 
     private void Awake(){
         rb=GetComponent<Rigidbody2D>();
+        // moveDistance = container.GetComponent<RectTransform>().sizeDelta.y * ScreenCalculations.GetAspectRatio(gameObject);
+        moveDistance = container.GetComponent<RectTransform>().sizeDelta.y * ScreenCalculations.GetScale(gameObject);
         tabUp = false;
     }
 
     void Update()
     {
-        moveDistance = container.GetComponent<RectTransform>().sizeDelta.y;
-
         if(vert)
         {
             if(tabUp)
-                targetPos = moveDistance - gameObject.GetComponent<RectTransform>().sizeDelta.y;
+                targetPos = moveDistance;
             else
                 targetPos = 0;
             
@@ -41,7 +41,7 @@ public class PopUpScript : MonoBehaviour
     {
         tabUp = !tabUp;
         if (!tabUp)
-            src.clip = SFX_CLOSE ;
+            src.clip = SFX_CLOSE;
         else
             src.clip = SFX_OPEN;
         
