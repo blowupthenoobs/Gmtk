@@ -5,7 +5,6 @@ using UnityEngine;
 public class QuestSlotScript : MonoBehaviour
 {
     public GameObject inventory;
-    public GameObject originalQuestPos;
     public GameObject quest;
     public GameObject draggableQuest;
     public bool hasItem;

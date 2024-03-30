@@ -29,6 +29,10 @@ public class QuestInventoryScript : MonoBehaviour
 
     public void FinishQuest(GameObject quest)
     {
-        
+        int QuestIndex = quests.IndexOf(quest);
+
+        quests.RemoveAt(QuestIndex);
+
+
     }
 }
