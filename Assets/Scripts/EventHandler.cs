@@ -10,6 +10,7 @@ public class EventHandler : MonoBehaviour
 
     public GameObject hero;
     public GameObject inventory;
+    public GameObject questContainer;
     public List<GameObject> heroSpots = new List<GameObject>();
     public Transform outStation;
 
@@ -17,6 +18,8 @@ public class EventHandler : MonoBehaviour
     //Items
     public GameObject sword;
     public GameObject healthPotion;
+
+    public GameObject defaultQuest;
 
     void Awake()
     {
@@ -29,6 +32,7 @@ public class EventHandler : MonoBehaviour
         inventory.GetComponent<InventoryScript>().recieveItem(sword, 2);
         inventory.GetComponent<InventoryScript>().recieveItem(healthPotion, 1);
         StartCoroutine(WaitToMakeHero(2));
+        questContainer.GetComponent<QuestInventoryScript>().RecieveQuest(defaultQuest);
     }
 
     void Update()
@@ -44,7 +48,7 @@ public class EventHandler : MonoBehaviour
 
     private IEnumerator WaitToMakeHero(int Time)
     {
-        MakeHero();
         yield return new WaitForSeconds(Time);
+        MakeHero();
     }
 }

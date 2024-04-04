@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class QuestSlotScript : MonoBehaviour
 {
-    public GameObject inventory;
-    public GameObject quest;
-    public GameObject draggableQuest;
+    [SerializeField] GameObject inventory;
+    GameObject quest;
+    [SerializeField] GameObject QuestPos;
     public bool hasItem;
 
     public void VisualizeItem(GameObject newQuest)
     {
         hasItem = true;
-        quest = Instantiate(newQuest, transform.position, gameObject.transform.rotation);
-        quest.transform.SetParent(gameObject.transform);
+        quest = newQuest;
+        GameObject Visual = Instantiate(newQuest, QuestPos.transform.position, gameObject.transform.rotation);
+        Visual.transform.SetParent(gameObject.transform);
+        Visual.transform.localScale = new Vector3(1f, 1f, 1f);
+        // Visual.transform.localPosition = new Vector2((Visual.GetComponent<RectTransform>().), 0f);
     }
 
     public void RemoveItem()

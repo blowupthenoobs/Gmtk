@@ -6,11 +6,15 @@ using UnityEngine.EventSystems;
 
 public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
-    [SerializeField] Canvas UI;
-    [SerializeField] GameObject TopUi;
+    GameObject TopUi;
     private bool isBeingDragged = false;
-    public GameObject startPos;
-    public float snapDist;
+    [SerializeField] GameObject startPos;
+    [SerializeField] float snapDist;
+
+    void Awake()
+    {
+        TopUi = ScreenCalculations.TopUI();
+    }
 
     void IDragHandler.OnDrag(PointerEventData eventData)
     {
@@ -32,10 +36,5 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
     {
         isBeingDragged = true;
         transform.SetParent(TopUi.transform);
-    }
-
-    void Update()
-    {
-
     }
 }

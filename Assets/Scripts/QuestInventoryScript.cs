@@ -11,17 +11,18 @@ public class QuestInventoryScript : MonoBehaviour
     public void RecieveQuest(GameObject quest)
     {
         quests.Add(quest);
+        AssignItem(quest);
     }
 
-    private void AssignItem(GameObject item)
+    private void AssignItem(GameObject quest)
     {
         bool foundSpot = false;
 
         for(var i=0; i<itemSlots.Length; i++)
         {
-            if(!itemSlots[i].GetComponent<ItemSlotScript>().hasItem && !foundSpot)
+            if(!itemSlots[i].GetComponent<QuestSlotScript>().hasItem && !foundSpot)
             {
-                itemSlots[i].GetComponent<ItemSlotScript>().VisualizeItem(item);
+                itemSlots[i].GetComponent<QuestSlotScript>().VisualizeItem(quest);
                 foundSpot = true;
             }
         }

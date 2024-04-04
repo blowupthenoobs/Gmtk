@@ -34,4 +34,9 @@ public class ScreenCalculations : MonoBehaviour
 
         return target;
     }
+
+    public static GameObject TopUI()
+    {
+        return GameObject.Find("TopElements");
+    }
 }
