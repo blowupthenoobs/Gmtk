@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class InventoryScript : MonoBehaviour
 {
-        public GameObject[] itemSlots;
+        [SerializeField] GameObject[] itemSlots;
+
+        
 
     public List<object> inventoryItems = new List<object>(); //evens store the gameobject (item), odds store the amount of said (previous) item
 
