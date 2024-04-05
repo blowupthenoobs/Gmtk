@@ -10,16 +10,9 @@ public class ItemSlotScript : MonoBehaviour
     private GameObject item;
     public bool hasItem;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetInventory(GameObject objectToBeSet)
     {
-        
-    }
-
-
-    void Update()
-    {
-        
+        inventory = objectToBeSet;
     }
 
     public void VisualizeItem(GameObject newItem)

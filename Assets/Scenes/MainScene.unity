@@ -2653,6 +2653,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 320045544}
     m_Modifications:
+    - target: {fileID: 284485866535349646, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
     - target: {fileID: 776031734442894402, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2677,6 +2681,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 806812294665148712, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
     - target: {fileID: 1493867248942313786, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2701,6 +2709,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1691210323980584530, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
     - target: {fileID: 1721829952305423881, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2797,6 +2809,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4346286476139145511, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
     - target: {fileID: 4481637446581337093, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2821,6 +2837,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4892667392219065631, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
     - target: {fileID: 5105750887573114330, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2869,6 +2889,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6000535530998419579, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
+    - target: {fileID: 6036977848566503372, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
+    - target: {fileID: 6221844951860239367, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
+    - target: {fileID: 6296310648333536952, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
     - target: {fileID: 6383602593289951391, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2949,6 +2985,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6594479617328957226, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
     - target: {fileID: 7301338729416192933, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
       propertyPath: m_Name
       value: SlotSet
@@ -3025,6 +3065,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8931061721191557932, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
+    - target: {fileID: 9155757724869646417, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 902849117}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

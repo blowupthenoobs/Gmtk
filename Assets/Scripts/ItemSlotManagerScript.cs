@@ -20,6 +20,13 @@ public class ItemSlotManagerScript : MonoBehaviour
 
         SlotSet[SlotSet.Count - 1].transform.SetParent(SetContainer.transform);
         SlotSet[SlotSet.Count - 1].transform.localScale = new Vector3(1f, 1f, 1f);
+
+        for(int i = 0; i < SlotSet[SlotSet.Count - 1].GetComponent<SlotSetScript>().slots.Length; i++)
+        {
+            gameObject.SendMessage("AddSlot", SlotSet[SlotSet.Count - 1].GetComponent<SlotSetScript>().slots[i]);
+            SlotSet[SlotSet.Count - 1].GetComponent<SlotSetScript>().slots[i].SendMessage("SetInventory", gameObject);
+        }
+
     }
 
     void SetAllSlotPositions()

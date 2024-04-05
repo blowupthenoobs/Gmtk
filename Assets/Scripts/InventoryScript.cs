@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class InventoryScript : MonoBehaviour
 {
-        [SerializeField] GameObject[] itemSlots;
-
-        
+        [SerializeField] List<GameObject> itemSlots = new List<GameObject>();
 
     public List<object> inventoryItems = new List<object>(); //evens store the gameobject (item), odds store the amount of said (previous) item
 
@@ -68,7 +66,7 @@ public class InventoryScript : MonoBehaviour
     {
         bool foundSpot = false;
 
-        for(var i=0; i<itemSlots.Length; i++)
+        for(var i=0; i<itemSlots.Count; i++)
         {
             if(!itemSlots[i].GetComponent<ItemSlotScript>().hasItem && !foundSpot)
             {
@@ -80,11 +78,16 @@ public class InventoryScript : MonoBehaviour
 
     private void LoseStack(GameObject item)
     {
-        for(var i=0; i<itemSlots.Length; i++)
+        for(var i=0; i<itemSlots.Count; i++)
         {
             if(itemSlots[i].GetComponent<ItemSlotScript>().heldItem=item)
                 itemSlots[i].GetComponent<ItemSlotScript>().RemoveItem();
         }
+    }
+
+    public void AddSlot(GameObject slot)
+    {
+        itemSlots.Add(slot);
     }
 
     
