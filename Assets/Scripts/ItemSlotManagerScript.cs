@@ -18,6 +18,8 @@ public class ItemSlotManagerScript : MonoBehaviour
     void Awake()
     {
         CreateNewSlot();
+        CreateNewSlot();
+        CreateNewSlot();
 
         originalContainerPos = setContainer.transform.position;
         containerTargetPos = originalContainerPos;
@@ -25,7 +27,7 @@ public class ItemSlotManagerScript : MonoBehaviour
 
     void Update()
     {
-        if(!moveVert)
+        if(moveVert)
             containerTargetPos.x = setContainer.transform.position.x;
         else
             containerTargetPos.y = setContainer.transform.position.y;
@@ -61,6 +63,13 @@ public class ItemSlotManagerScript : MonoBehaviour
 
     public void SlideSlots(int Direction)
     {
-        containerTargetPos += changeDistance * ScreenCalculations.GetScale(gameObject) * -Direction;
+        Vector3 changeAmount = changeDistance * ScreenCalculations.GetScale(gameObject) * -Direction;
+        Vector3 maxChange = originalContainerPos + (changeDistance * ScreenCalculations.GetScale(gameObject) * (SlotSet.Count - 2));
+
+        if(!moveVert && -maxChange.x <= changeAmount.x + containerTargetPos.x && containerTargetPos.x + changeAmount.x <= originalContainerPos.x)
+            containerTargetPos += changeAmount;
+        else if(moveVert && -maxChange.y <= changeAmount.y + containerTargetPos.y && containerTargetPos.y + changeAmount.y <= originalContainerPos.y)
+            containerTargetPos += changeAmount;
+
     }
 }

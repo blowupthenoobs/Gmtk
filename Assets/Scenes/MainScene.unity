@@ -1376,7 +1376,7 @@ MonoBehaviour:
   slotPrefab: {fileID: 7301338729416192933, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}
   setContainer: {fileID: 320045543}
   moveSpeed: 2000
-  moveVert: 1
+  moveVert: 0
 --- !u!1 &938615543
 GameObject:
   m_ObjectHideFlags: 0
