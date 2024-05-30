@@ -21,6 +21,8 @@ public class EventHandler : MonoBehaviour
 
     public GameObject defaultQuest;
 
+    public List<GameObject> openQuests = new List<GameObject>();
+
     void Awake()
     {
         if(Instance==null)

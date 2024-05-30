@@ -18,8 +18,6 @@ public class ItemSlotManagerScript : MonoBehaviour
     void Awake()
     {
         CreateNewSlot();
-        CreateNewSlot();
-        CreateNewSlot();
 
         originalContainerPos = setContainer.transform.position;
         containerTargetPos = originalContainerPos;

@@ -2015,6 +2015,7 @@ MonoBehaviour:
   sword: {fileID: 5613082317880415361, guid: e13d11c500f7403498a7854b4150b5bb, type: 3}
   healthPotion: {fileID: 6408809143296157062, guid: 137006a3c4c7d62438968c5ee70466ef, type: 3}
   defaultQuest: {fileID: 2434772293706334437, guid: 6a5ab7fa50bacc84f9a429bef150623c, type: 3}
+  openQuests: []
 --- !u!1 &1472719966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 599076601463574703, guid: 5357e2e5a52c4024682c4943c9e87ada, type: 3}

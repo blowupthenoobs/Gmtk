@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
+public class ItemScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
+    
     GameObject TopUi;
     private bool isBeingDragged = false;
-    [SerializeField] GameObject startPos;
+    public GameObject startPos;
     [SerializeField] float snapDist;
 
     void Awake()
@@ -29,6 +30,16 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
         {
             transform.position = startPos.transform.position;
             transform.SetParent(startPos.transform);
+        }
+
+        for(int i = 0; i < EventHandler.Instance.openQuests.Count; i++)
+        {
+            var quest = EventHandler.Instance.openQuests[i];
+            if(Vector2.Distance(transform.position, quest.transform.position) <= snapDist)
+            {
+                transform.position = quest.transform.position;
+                transform.SetParent(quest.transform);
+            }
         }
     }
 

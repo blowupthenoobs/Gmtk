@@ -436,7 +436,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802bcccc6fdea7748a1788a0903dc0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TopUi: {fileID: 0}
   startPos: {fileID: 7424647101887057817}
   snapDist: 5
 --- !u!1 &1627943864646122083

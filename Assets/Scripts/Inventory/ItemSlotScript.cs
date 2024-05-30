@@ -20,6 +20,7 @@ public class ItemSlotScript : MonoBehaviour
         hasItem=true;
         heldItem=newItem;
         item=Instantiate(heldItem, gameObject.transform.position, gameObject.transform.rotation);
+        item.GetComponent<ItemScript>().startPos = gameObject;
         item.transform.SetParent(gameObject.transform);
     }
 
