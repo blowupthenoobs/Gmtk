@@ -6,20 +6,23 @@ public class ItemSlotScript : MonoBehaviour
 {
     public GameObject inventory;
     public GameObject placeHolder;
-    public GameObject heldItem;
+    public Item heldItem;
     private GameObject item;
     public bool hasItem;
+
+    [SerializeField] GameObject itemPrefab;
 
     public void SetInventory(GameObject objectToBeSet)
     {
         inventory = objectToBeSet;
     }
 
-    public void VisualizeItem(GameObject newItem)
+    public void VisualizeItem(Item newItem)
     {
-        hasItem=true;
-        heldItem=newItem;
-        item=Instantiate(heldItem, gameObject.transform.position, gameObject.transform.rotation);
+        hasItem = true;
+        heldItem = newItem;
+        item = Instantiate(itemPrefab, gameObject.transform.position, gameObject.transform.rotation);
+        item.GetComponent<ItemScript>().AssignItem(newItem);
         item.GetComponent<ItemScript>().startPos = gameObject;
         item.transform.SetParent(gameObject.transform);
     }
@@ -27,8 +30,8 @@ public class ItemSlotScript : MonoBehaviour
     public void RemoveItem()
     {
         Destroy(item);
-        heldItem=placeHolder;
-        hasItem=false;
+        heldItem = null;
+        hasItem = false;
     }
 
     public void Select()

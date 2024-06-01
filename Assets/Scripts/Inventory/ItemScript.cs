@@ -8,6 +8,7 @@ public class ItemScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDr
 {
     
     GameObject TopUi;
+    [SerializeField] Item item;
     private bool isBeingDragged = false;
     public GameObject startPos;
     [SerializeField] float snapDist;
@@ -15,6 +16,15 @@ public class ItemScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDr
     void Awake()
     {
         TopUi = ScreenCalculations.TopUI();
+
+        // transform.localScale = new Vector3(1f, 1f);
+        Debug.Log("twas run");
+    }
+
+    public void AssignItem(Item source)
+    {
+        item = source;
+        item.SetUpItem(gameObject);
     }
 
     void IDragHandler.OnDrag(PointerEventData eventData)

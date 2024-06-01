@@ -16,8 +16,8 @@ public class EventHandler : MonoBehaviour
 
 
     //Items
-    public GameObject sword;
-    public GameObject healthPotion;
+    public Item sword;
+    // public Item healthPotion;
 
     public GameObject defaultQuest;
 
@@ -32,7 +32,7 @@ public class EventHandler : MonoBehaviour
 
         //Starting Items
         inventory.GetComponent<InventoryScript>().recieveItem(sword, 2);
-        inventory.GetComponent<InventoryScript>().recieveItem(healthPotion, 1);
+        // inventory.GetComponent<InventoryScript>().recieveItem(healthPotion, 1);
         StartCoroutine(WaitToMakeHero(2));
         questContainer.GetComponent<QuestInventoryScript>().RecieveQuest(defaultQuest);
     }

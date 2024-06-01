@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class InventoryScript : MonoBehaviour
 {
-        [SerializeField] List<GameObject> itemSlots = new List<GameObject>();
-
+    [SerializeField] List<GameObject> itemSlots = new List<GameObject>();
     public List<object> inventoryItems = new List<object>(); //evens store the gameobject (item), odds store the amount of said (previous) item
 
-    public void recieveItem(GameObject item, int count)
+
+    public void recieveItem(Item item, int count)
     {
         if (inventoryItems.Contains(item))
         {
@@ -24,7 +24,7 @@ public class InventoryScript : MonoBehaviour
         }
     }
     
-    public bool loseItem(GameObject item, int count)
+    public bool loseItem(Item item, int count)
     {
 
         int indexOfItemCount = inventoryItems.IndexOf(item) + 1;
@@ -48,7 +48,7 @@ public class InventoryScript : MonoBehaviour
             return false;
     }
 
-    public int checkItemCount(GameObject item)
+    public int checkItemCount(Item item)
     {
         int indexOfItemCount;
 
@@ -62,7 +62,7 @@ public class InventoryScript : MonoBehaviour
 
     }
 
-    private void AssignItem(GameObject item)
+    private void AssignItem(Item item)
     {
         bool foundSpot = false;
 
@@ -76,11 +76,11 @@ public class InventoryScript : MonoBehaviour
         }
     }
 
-    private void LoseStack(GameObject item)
+    private void LoseStack(Item item)
     {
         for(var i=0; i<itemSlots.Count; i++)
         {
-            if(itemSlots[i].GetComponent<ItemSlotScript>().heldItem=item)
+            if(itemSlots[i].GetComponent<ItemSlotScript>().heldItem = item)
                 itemSlots[i].GetComponent<ItemSlotScript>().RemoveItem();
         }
     }

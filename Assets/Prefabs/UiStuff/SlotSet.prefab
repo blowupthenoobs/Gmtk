@@ -91,8 +91,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &6849455116151783352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,8 +241,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &3734481192242322151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,8 +391,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &3262234578809244062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,8 +541,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &9057518398895088766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,8 +691,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &7403278999645865069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -836,8 +841,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &941033775659956757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -985,8 +991,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &887827472997257879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,8 +1141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &4142393898317244284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1283,8 +1291,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &6255919554904576056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,8 +1548,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &8951796038997988881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1688,8 +1698,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &4309675690677651248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1837,8 +1848,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7301338729416192933}
   placeHolder: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
-  heldItem: {fileID: 6829078082217970777, guid: f5cbb82ef7627b845b42fa8e9e712d22, type: 3}
+  heldItem: {fileID: 0}
   hasItem: 0
+  itemPrefab: {fileID: 5848972224271906825, guid: 5bf5a545cd74ffa469277db8453487f5, type: 3}
 --- !u!114 &8708446631220739704
 MonoBehaviour:
   m_ObjectHideFlags: 0
