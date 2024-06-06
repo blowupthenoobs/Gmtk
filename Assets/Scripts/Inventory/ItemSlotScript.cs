@@ -25,6 +25,7 @@ public class ItemSlotScript : MonoBehaviour
         item.GetComponent<ItemScript>().AssignItem(newItem);
         item.GetComponent<ItemScript>().startPos = gameObject;
         item.transform.SetParent(gameObject.transform);
+        item.transform.localScale *= ScreenCalculations.GetScale(item);
     }
 
     public void RemoveItem()

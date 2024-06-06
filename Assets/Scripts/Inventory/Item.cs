@@ -11,6 +11,6 @@ public class Item : ScriptableObject
 
     public virtual void SetUpItem(GameObject item)
     {
-        Debug.Log("did nothing");
+        item.GetComponent<UnityEngine.UI.Image>().overrideSprite = image;
     }
 }
