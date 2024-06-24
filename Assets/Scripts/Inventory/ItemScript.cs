@@ -48,7 +48,8 @@ public class ItemScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDr
             if(Vector2.Distance(transform.position, quest.transform.position) <= snapDist)
             {
                 transform.position = quest.transform.position;
-                transform.SetParent(quest.transform);
+                quest.SendMessage("AddItem", item);
+                Destroy(gameObject);
             }
         }
     }

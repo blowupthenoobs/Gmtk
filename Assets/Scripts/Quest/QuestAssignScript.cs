@@ -11,6 +11,8 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
     [SerializeField] GameObject startPos;
     [SerializeField] float snapDist;
 
+    public List<Item> items = new List<Item>();
+
     void Awake()
     {
         TopUi = ScreenCalculations.TopUI();
@@ -39,5 +41,11 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
 
         if(!EventHandler.Instance.openQuests.Contains(gameObject))
             EventHandler.Instance.openQuests.Add(gameObject);
+    }
+
+    public void AddItem(Item item)
+    {
+        items.Add(item);
+        // InventoryScript.Instance.LoseItem(item, 1);
     }
 }

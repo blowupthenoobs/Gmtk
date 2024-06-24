@@ -14,7 +14,6 @@ public class EventHandler : MonoBehaviour
     public List<GameObject> heroSpots = new List<GameObject>();
     public Transform outStation;
 
-
     //Items
     public Item sword;
     // public Item healthPotion;
@@ -52,5 +51,10 @@ public class EventHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(Time);
         MakeHero();
+    }
+
+    public void SendInventoryMessage(string command, Item item)
+    {
+        //figure out how to put functions here
     }
 }
