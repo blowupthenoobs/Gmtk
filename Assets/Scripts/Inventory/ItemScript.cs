@@ -37,10 +37,7 @@ public class ItemScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDr
         isBeingDragged = false;
 
         if(Vector2.Distance(transform.position, startPos.transform.position) <= snapDist)
-        {
-            transform.position = startPos.transform.position;
-            transform.SetParent(startPos.transform);
-        }
+            ResetPosition();
 
         for(int i = 0; i < EventHandler.Instance.openQuests.Count; i++)
         {
@@ -49,7 +46,7 @@ public class ItemScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDr
             {
                 transform.position = quest.transform.position;
                 quest.SendMessage("AddItem", item);
-                Destroy(gameObject);
+                ResetPosition();
             }
         }
     }
@@ -58,5 +55,11 @@ public class ItemScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDr
     {
         isBeingDragged = true;
         transform.SetParent(TopUi.transform);
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = startPos.transform.position;
+        transform.SetParent(startPos.transform);
     }
 }

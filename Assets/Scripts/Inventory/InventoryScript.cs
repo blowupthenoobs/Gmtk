@@ -52,9 +52,15 @@ public class InventoryScript : MonoBehaviour
     {
         int indexOfItemCount;
 
-        indexOfItemCount = inventoryItems.IndexOf(item) + 1;
+        if(inventoryItems.Contains(item))
+        {
+            indexOfItemCount = inventoryItems.IndexOf(item) + 1;
 
-        return (int)inventoryItems[indexOfItemCount];
+            return (int)inventoryItems[indexOfItemCount];
+        }
+        else
+            return 0;
+        
     }
 
     void Update()

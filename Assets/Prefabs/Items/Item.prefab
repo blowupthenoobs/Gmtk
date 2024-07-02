@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   startPos: {fileID: 0}
-  snapDist: 3
+  snapDist: 5
 --- !u!222 &7510291385829066993
 CanvasRenderer:
   m_ObjectHideFlags: 0
