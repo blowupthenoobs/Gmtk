@@ -11,6 +11,7 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
     [SerializeField] GameObject startPos;
     [SerializeField] float snapDist;
 
+    private bool canBeSelected = true;
     public List<Item> items = new List<Item>();
 
     void Awake()
@@ -28,14 +29,14 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
         isBeingDragged = false;
 
         if(Vector2.Distance(transform.position, startPos.transform.position) <= snapDist)
-        {
-            transform.position = startPos.transform.position;
-            transform.SetParent(startPos.transform);
-        }
+            ResetPosition();
+        
+        canBeSelected = true;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        canBeSelected = false;
         isBeingDragged = true;
         transform.SetParent(TopUi.transform);
 
@@ -47,5 +48,23 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
     {
         items.Add(item);
         EventHandler.Instance.inventory.GetComponent<InventoryScript>().LoseItem(item, 1);
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = startPos.transform.position;
+        transform.SetParent(startPos.transform);
+
+        while(items.Count > 0)
+        {
+            EventHandler.Instance.inventory.GetComponent<InventoryScript>().RecieveItem(items[0]);
+            items.RemoveAt(0);
+        }
+    }
+
+    public void Select()
+    {
+        if(canBeSelected)
+            EventHandler.Instance.selected = gameObject;
     }
 }

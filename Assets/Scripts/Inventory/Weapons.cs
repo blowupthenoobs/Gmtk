@@ -12,6 +12,5 @@ public class Weapons : Item
     public override void SetUpItem(GameObject item)
     {
         base.SetUpItem(item);
-        Debug.Log(item + "tis a weapon");
     }
 }

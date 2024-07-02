@@ -18,7 +18,6 @@ public class ItemScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDr
         TopUi = ScreenCalculations.TopUI();
 
         // transform.localScale = new Vector3(1f, 1f);
-        Debug.Log("twas run");
     }
 
     public void AssignItem(Item source)

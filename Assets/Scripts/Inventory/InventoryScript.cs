@@ -23,6 +23,22 @@ public class InventoryScript : MonoBehaviour
             AssignItem(item);
         }
     }
+
+    public void RecieveItem(Item item)
+    {
+        if (inventoryItems.Contains(item))
+        {
+            int indexOfItemCount = inventoryItems.IndexOf(item) + 1;
+
+            inventoryItems[indexOfItemCount] = (int)inventoryItems[indexOfItemCount] + 1;
+        }
+        else
+        {
+            inventoryItems.Add(item);
+            inventoryItems.Add(1);
+            AssignItem(item);
+        }
+    }
     
     public bool LoseItem(Item item, int count)
     {
