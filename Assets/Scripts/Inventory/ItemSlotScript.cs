@@ -37,6 +37,6 @@ public class ItemSlotScript : MonoBehaviour
 
     public void Select()
     {
-        Debug.Log(inventory.GetComponent<InventoryScript>().checkItemCount(heldItem));
+        Debug.Log(inventory.GetComponent<InventoryScript>().CheckItemCount(heldItem));
     }
 }

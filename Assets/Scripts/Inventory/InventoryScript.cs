@@ -8,7 +8,7 @@ public class InventoryScript : MonoBehaviour
     public List<object> inventoryItems = new List<object>(); //evens store the gameobject (item), odds store the amount of said (previous) item
 
 
-    public void recieveItem(Item item, int count)
+    public void RecieveItem(Item item, int count)
     {
         if (inventoryItems.Contains(item))
         {
@@ -24,21 +24,21 @@ public class InventoryScript : MonoBehaviour
         }
     }
     
-    public bool loseItem(Item item, int count)
+    public bool LoseItem(Item item, int count)
     {
 
         int indexOfItemCount = inventoryItems.IndexOf(item) + 1;
 
         
 
-        if ((int)inventoryItems[indexOfItemCount] <= count)
+        if ((int)inventoryItems[indexOfItemCount] >= count)
         {
             inventoryItems[indexOfItemCount] = (int)inventoryItems[indexOfItemCount] - count;
 
             if (((int)inventoryItems[indexOfItemCount] == 0))
             {
                 inventoryItems.RemoveAt(indexOfItemCount);
-                inventoryItems.RemoveAt(indexOfItemCount);
+                inventoryItems.RemoveAt(indexOfItemCount - 1);
                 LoseStack(item);
             }
 
@@ -48,7 +48,7 @@ public class InventoryScript : MonoBehaviour
             return false;
     }
 
-    public int checkItemCount(Item item)
+    public int CheckItemCount(Item item)
     {
         int indexOfItemCount;
 

@@ -46,6 +46,6 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
     public void AddItem(Item item)
     {
         items.Add(item);
-        // InventoryScript.Instance.LoseItem(item, 1);
+        EventHandler.Instance.inventory.GetComponent<InventoryScript>().LoseItem(item, 1);
     }
 }
