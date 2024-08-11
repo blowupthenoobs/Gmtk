@@ -56,7 +56,6 @@ public class HeroScript : MonoBehaviour
 
     public void LeaveSpot()
     {
-        Debug.Log("being called"); 
         spotToGo=MissionStation;
         barSpots[spotIndex].GetComponent<SpotScript>().LeaveSpot();
         foundSpot=false;
