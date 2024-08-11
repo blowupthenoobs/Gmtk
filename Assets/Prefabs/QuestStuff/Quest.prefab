@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802bcccc6fdea7748a1788a0903dc0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 0}
   startPos: {fileID: 7424647101887057817}
   snapDist: 5
   items: []
@@ -720,6 +721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6399e80b45751a049962edc7c72d2ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 0}
+  draggablePart: {fileID: 1384321722910449205}
 --- !u!1 &7424647101887057817
 GameObject:
   m_ObjectHideFlags: 0

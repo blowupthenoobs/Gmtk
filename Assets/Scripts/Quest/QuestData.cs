@@ -10,7 +10,7 @@ public class QuestData : ScriptableObject
     public double gameTicks;
 
 
-    void Update()
+    public void Update()
     {
         if(assignedHero != null)
         {
@@ -29,11 +29,13 @@ public class QuestData : ScriptableObject
         currentProgress += 1;
 
         if(currentProgress >= questLength)
-            FinishQuest()
+            FinishQuest();
     }
 
     void FinishQuest()
     {
-        Debug.Log("finished");
+        assignedHero.SendMessage("EnterBar");
+
+        //Do other things
     }
 }

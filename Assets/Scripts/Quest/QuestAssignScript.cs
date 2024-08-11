@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
+    public QuestData quest;
     GameObject TopUi;
     private bool isBeingDragged = false;
     [SerializeField] GameObject startPos;
@@ -18,6 +19,8 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
     {
         TopUi = ScreenCalculations.TopUI();
     }
+
+#region draggingStuffs
 
     void IDragHandler.OnDrag(PointerEventData eventData)
     {
@@ -62,9 +65,15 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
         }
     }
 
+#endregion
     public void Select()
     {
         if(canBeSelected)
             EventHandler.Instance.selected = gameObject;
+    }
+
+    public void HeroAssigned(GameObject hero)
+    {
+        quest.assignedHero = hero;
     }
 }

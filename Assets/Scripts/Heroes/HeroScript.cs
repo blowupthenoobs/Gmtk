@@ -45,13 +45,19 @@ public class HeroScript : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, spotToGo.transform.position, moveSpeed*Time.deltaTime);
     }
 
-    public void AcceptQuest()
+    public void Click()
     {
         if(EventHandler.Instance.selected != null)
         {
             if(EventHandler.Instance.selected.GetComponent<QuestAssignScript>() != null)
-                LeaveSpot();
+                AcceptQuest();
         }
+    }
+
+    public void AcceptQuest()
+    {
+        LeaveSpot();
+        EventHandler.Instance.selected.SendMessage("HeroAssigned", gameObject);
     }
 
     public void LeaveSpot()
