@@ -41,7 +41,18 @@ public class EventHandler : MonoBehaviour
 
     void Update()
     {
-        
+        if(Input.GetMouseButtonDown(0))
+        {
+            var originalSelection = selected;
+
+            float timer = Time.time + 1;
+
+            while(timer < Time.time)
+                Debug.Log("waiting");
+            
+            // if(originalSelection == selected)
+            //     selected = null;
+        }
     }
 
     public void MakeHero()
