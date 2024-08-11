@@ -123,7 +123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6107975844085003465}
         m_TargetAssemblyTypeName: HeroScript, Assembly-CSharp
-        m_MethodName: AcceptQuest
+        m_MethodName: Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -150,4 +150,3 @@ MonoBehaviour:
   MissionStation: {fileID: 0}
   spotIndex: 0
   moveSpeed: 200
-  foundFirstSpot: 0
