@@ -42,6 +42,7 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
         canBeSelected = false;
         isBeingDragged = true;
         transform.SetParent(TopUi.transform);
+        transform.SetAsFirstSibling();
 
         if(!EventHandler.Instance.openQuests.Contains(gameObject))
             EventHandler.Instance.openQuests.Add(gameObject);

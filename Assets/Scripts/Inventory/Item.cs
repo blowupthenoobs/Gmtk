@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Item : ScriptableObject
 {
-    public enum role {Warrior, Mage, Medic, Rogue};
+    public enum role {Warrior, Mage, Medic, Rogue, Archer};
     public List<role> type = new List<role>();
     public int value;
     public Sprite image;

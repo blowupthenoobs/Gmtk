@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HeroScript : MonoBehaviour
 {
+    public Hero heroData;
     public List<GameObject> barSpots = new List<GameObject>();
     private bool foundSpot;
     public Transform spotToGo;
@@ -36,7 +37,10 @@ public class HeroScript : MonoBehaviour
     {
         barSpots = EventHandler.Instance.heroSpots;
         MissionStation = EventHandler.Instance.outStation;
-        
+
+        heroData = (Hero)ScriptableObject.CreateInstance(typeof(Hero))
+        heroData.RandomizeValues();
+
         EnterBar();
     }
 
