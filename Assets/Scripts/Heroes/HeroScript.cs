@@ -38,7 +38,7 @@ public class HeroScript : MonoBehaviour
         barSpots = EventHandler.Instance.heroSpots;
         MissionStation = EventHandler.Instance.outStation;
 
-        heroData = (Hero)ScriptableObject.CreateInstance(typeof(Hero))
+        heroData = (Hero)ScriptableObject.CreateInstance(typeof(Hero));
         heroData.RandomizeValues();
 
         EnterBar();
@@ -54,8 +54,14 @@ public class HeroScript : MonoBehaviour
         if(EventHandler.Instance.selected != null)
         {
             if(EventHandler.Instance.selected.GetComponent<QuestAssignScript>() != null)
-                AcceptQuest();
+                EvaluateQuest(EventHandler.Instance.selected.GetComponent<QuestAssignScript>().quest);
         }
+    }
+
+    private void EvaluateQuest(QuestData quest)
+    {
+        if(heroData.DecideToTakeMission(quest))
+            AcceptQuest();
     }
 
     public void AcceptQuest()

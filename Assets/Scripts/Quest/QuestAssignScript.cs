@@ -13,7 +13,6 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
     [SerializeField] float snapDist;
 
     private bool canBeSelected = true;
-    public List<Item> items = new List<Item>();
 
     void Awake()
     {
@@ -50,7 +49,7 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
 
     public void AddItem(Item item)
     {
-        items.Add(item);
+        quest.items.Add(item);
         EventHandler.Instance.inventory.GetComponent<InventoryScript>().LoseItem(item, 1);
     }
 
@@ -59,10 +58,10 @@ public class QuestAssignScript : MonoBehaviour, IDragHandler, IEndDragHandler, I
         transform.position = startPos.transform.position;
         transform.SetParent(startPos.transform);
 
-        while(items.Count > 0)
+        while(quest.items.Count > 0)
         {
-            EventHandler.Instance.inventory.GetComponent<InventoryScript>().RecieveItem(items[0]);
-            items.RemoveAt(0);
+            EventHandler.Instance.inventory.GetComponent<InventoryScript>().RecieveItem(quest.items[0]);
+            quest.items.RemoveAt(0);
         }
     }
 

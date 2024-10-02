@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using DataCollections;
+
 public class Item : ScriptableObject
 {
-    public enum role {Warrior, Mage, Medic, Rogue, Archer};
     public List<role> type = new List<role>();
-    public int value;
+    public int normalValue;
     public Sprite image;
 
     public virtual void SetUpItem(GameObject item)

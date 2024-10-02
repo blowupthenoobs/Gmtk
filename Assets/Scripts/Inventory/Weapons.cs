@@ -17,6 +17,7 @@ public class Weapons : Item
 
     public override void SetUpItem(GameObject item)
     {
+        dps = damage * speed / 2;
         base.SetUpItem(item);
     }
 }
