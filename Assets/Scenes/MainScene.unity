@@ -2012,6 +2012,8 @@ MonoBehaviour:
   - {fileID: 1489368539}
   - {fileID: 12270222}
   outStation: {fileID: 1866730125}
+  nullWeapon: {fileID: 11400000, guid: 2ccd21d4537fe324e9cb0a883b773338, type: 2}
+  nullArmor: {fileID: 0}
   sword: {fileID: 11400000, guid: d005ebadf06483746b6c2d733b758dc6, type: 2}
   defaultQuest: {fileID: 2434772293706334437, guid: 6a5ab7fa50bacc84f9a429bef150623c, type: 3}
   openQuests: []

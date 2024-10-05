@@ -14,7 +14,11 @@ public class EventHandler : MonoBehaviour
     public List<GameObject> heroSpots = new List<GameObject>();
     public Transform outStation;
 
-    //Items
+    [Header("Null Items")]
+    public Item nullWeapon;
+    public Item nullArmor;
+    
+    [Header("Normal Items")]
     public Item sword;
     // public Item healthPotion;
 
@@ -24,6 +28,7 @@ public class EventHandler : MonoBehaviour
 
 
     public GameObject selected;
+
 
     void Awake()
     {

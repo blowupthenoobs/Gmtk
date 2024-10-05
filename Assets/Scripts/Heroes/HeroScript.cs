@@ -40,6 +40,7 @@ public class HeroScript : MonoBehaviour
 
         heroData = (Hero)ScriptableObject.CreateInstance(typeof(Hero));
         heroData.RandomizeValues();
+        heroData.currentWeapon = (Weapons)EventHandler.Instance.nullWeapon;
 
         EnterBar();
     }
