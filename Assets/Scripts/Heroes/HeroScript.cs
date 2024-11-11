@@ -71,6 +71,11 @@ public class HeroScript : MonoBehaviour
         EventHandler.Instance.selected.SendMessage("HeroAssigned", gameObject);
     }
 
+    public void RecieveItems(List<Item> missionRewards)
+    {
+        heroData.RecieveItems(missionRewards);
+    }
+
     public void LeaveSpot()
     {
         spotToGo=MissionStation;

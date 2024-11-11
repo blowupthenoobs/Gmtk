@@ -28,6 +28,8 @@ public class Hero : ScriptableObject
 
     public Weapons currentWeapon;
     public Armor currentArmor;
+    public List<Item> inventory = new List<Item>();
+    public int money;
 
     public void RandomizeValues()
     {
@@ -110,18 +112,57 @@ public class Hero : ScriptableObject
         {
             if(missionRewards[i] is Weapons)
             {
-                if(CompareWeaponPreferencialValue((Weapons)missionRewards[i]) > 0)
+                if(missionRewards[0].type.Contains(classType) && CompareWeaponPreferencialValue((Weapons)missionRewards[i]) > 0)
                     value += CompareWeaponPreferencialValue((Weapons)missionRewards[i]);
                 else
                     value += missionRewards[i].normalValue;
             }
             else if(missionRewards[i] is Armor)
             {
-                value += missionRewards[i].normalValue;
+                if(missionRewards[0].type.Contains(classType) && CompareArmorPreferencialValue((Armor)missionRewards[i]) > 0)
+                    value += CompareArmorPreferencialValue((Armor)missionRewards[i]);
+                else
+                    value += missionRewards[i].normalValue;
             }
         }
         
         return (int)value;
+    }
+
+    public void RecieveItems(List<Item> missionRewards)
+    {
+        while(missionRewards.Count > 0)
+        {
+            if(missionRewards[0] is Weapons)
+            {
+                if(missionRewards[0].type.Contains(classType) && CompareWeaponPreferencialValue((Weapons)missionRewards[0]) > 0)
+                {
+                    money += currentWeapon.normalValue;
+                    currentWeapon = (Weapons)missionRewards[0];
+                }
+                else
+                    money += missionRewards[0].normalValue;
+            }
+            else if(missionRewards[0] is Armor)
+            {
+                if(missionRewards[0].type.Contains(classType) && CompareArmorPreferencialValue((Armor)missionRewards[0]) > 0)
+                {
+                    money += currentArmor.normalValue;
+                    currentArmor = (Armor)missionRewards[0];
+                }
+                else
+                    money += missionRewards[0].normalValue;
+            }
+            else
+            {
+                if(missionRewards[0].type.Contains(classType))
+                    inventory.Add(missionRewards[0]);
+                else
+                    money += missionRewards[0].normalValue;
+            }
+
+            missionRewards.RemoveAt(0);
+        }
     }
 
     public float CompareWeaponPreferencialValue(Weapons otherWeapon)
@@ -137,6 +178,19 @@ public class Hero : ScriptableObject
         value += (otherWeapon.bleed - currentWeapon.bleed) * bleedPref;
         value += (otherWeapon.manaEfficiency - currentWeapon.manaEfficiency) * manaEfficiencyPref;
         value += (otherWeapon.weight - currentWeapon.weight) * weightPref;
+
+        return value;
+    }
+
+    public float CompareArmorPreferencialValue(Armor otherArmor)
+    {
+        float value = 0;
+
+        value += (otherArmor.protection - currentArmor.protection) * protectionPref;
+        value += (otherArmor.weightlessness - currentArmor.weightlessness) * weightlessnessPref;
+        value += (otherArmor.magicResist - currentArmor.magicResist) * magicResistPref;
+        value += (otherArmor.manaStorage - currentArmor.manaStorage) * manaStoragePref;
+        value += (otherArmor.stealth - currentArmor.stealth) * stealthPref;
 
         return value;
     }

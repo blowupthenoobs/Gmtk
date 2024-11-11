@@ -41,7 +41,8 @@ public class QuestData : ScriptableObject
     void FinishQuest()
     {
         assignedHero.SendMessage("EnterBar");
-
+        assignedHero.SendMessage("RecieveItems", items);
+        assignedHero = null;
         //Do other things
     }
 
