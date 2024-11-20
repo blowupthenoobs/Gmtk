@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   type: 00000000
-  value: 0
+  normalValue: 5
   image: {fileID: 21300000, guid: 8fc66c9c227d995468d151452737dca1, type: 3}
   damage: 3
   range: 2
   speed: 2
+  dps: 3
+  penetrationPower: 0
+  stun: 0
+  bleed: 0
+  manaEfficiency: 0
+  weight: 0
